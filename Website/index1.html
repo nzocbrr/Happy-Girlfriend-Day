@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Girlfriend Day!</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="ribbon">
+  <h1 class="title">Happy Girlfriend Day!</h1>
+</div>
+  <div class="gallery">
+    <div class="polaroid">
+      <img src="img1.jpg" alt="Memory 1">
+      <div class="caption"></div>
+    </div>
+    <div class="polaroid">
+      <img src="img6..JPEG" alt="Memory 2">
+      <div class="caption"></div>
+    </div>
+    <div class="polaroid">
+      <img src="img8.JPEG" alt="Memory 3">
+      <div class="caption"></div>
+    </div>
+    <div class="polaroid">
+  <img src="img5.jpg" alt="Memory 4">
+  <div class="caption"></div>
+</div>
+<div class="polaroid">
+  <img src="img4.jpg" alt="Memory 5">
+  <div class="caption"></div>
+</div>
+    <div class="polaroid">
+      <img src="img9.JPEG" alt="Memory 6">
+      <div class="caption"></div>
+    </div>
+    <div class="polaroid">
+      <img src="IMG_8904.JPEG" alt="Memory 7">
+      <div class="caption"></div>
+    </div>
+    <div class="polaroid">
+      <img src="img3.jpg" alt="Memory 8">
+      <div class="caption"></div>
+    </div>
+    <div class="polaroid">
+      <img src="img2.jpg" alt="Memory 9">
+      <div class="caption"></div>
+  </div>
+  <div class="polaroid">
+      <img src="img7.JPEG" alt="Memory 10">
+      <div class="caption"></div>
+  </div>
+  <div class="polaroid">
+      <img src="IMG_9419.JPEG" alt="Memory 11">
+      <div class="caption"></div>
+  </div>
+  <div class="polaroid">
+      <img src="IMG_9858.JPEG" alt="Memory 12">
+      <div class="caption"></div>
+  </div>
+  </div>
+  <div class="message">
+    <h2>Dear Ji,</h2>
+    <p>HI, BEBE KO!! another website for u ulit!! HEHEHEHE. THANK YOU FOR BEING THE BEST GIRLFRIEND EVER!! I appreciate every moment with you!! 
+      <br><br>
+      I just wanna express how much I love you and how grateful I am to have you in my life. I love every thing that you do and every part of you. I love how simple yet extraordinary you are. I love your eyes, your smile, your laugh, your voice. I love kung pano ka mag sneeze. I love your little sexy dance pag nasa bus tayo. I love the way you scrunch your nose when smiling. I love the way you pout pag nag selfie. I love how tiny ur nose and mouth are. I love the way you look at me with those eyes. I love how focused you are pag nag lalaro ka ng games mo sa phone, like ang serious ng face mo hehe cute. I love how you say "Bruh!". I love how cute you are when you force yourself to ignore me when you are mad tas may patagong pang tawa tas balik nanaman sa pag ignore. AY BASTA, ANDAMI KO PA GUSTO SABIHIN ABOUT SA THINGS THAT I LOVE ABOUT YOU. I love how you make me feel so loved and special. I love how you always support me and believe in me. I love how you make me laugh and smile. I love how you are always there for me, no matter what. I love every moment and the comfort when I'm with you. I love how you are my best friend, my partner, my everything.
+    </p>
+    <p>Thank you for being you, and for being mine. I love you so much, Ji! Happy Girlfriend Day!</p>
+    
+    <p class="signature">Sincerly, <br>BF mo</p>
+    </div>
+
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      } else {
+        entry.target.classList.remove('animate');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.polaroid').forEach(polaroid => {
+    observer.observe(polaroid);
+  });
+</script>
+
+</body>
+</html>

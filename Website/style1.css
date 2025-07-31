@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito";
+  background: linear-gradient(-45deg, #ffafcc, #ffc3a0, #ffe6f0, #d5aaff);
+  background-size: 400% 400%;
+  animation: gradientMove 5s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.ribbon {
+  position: relative;
+  display: inline-block;
+  background: #fca38f;
+  padding: 5px 10px;
+  margin-top: 30px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 90vw;
+  word-wrap: break-word;
+}
+
+.ribbon-text {
+  position: relative;
+  z-index: 2;
+}
+
+.ribbon::before,
+.ribbon::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  border: 10px solid transparent;
+  border-top-color: #d79572;
+}
+
+.ribbon::before {
+  left: 0;
+}
+
+.ribbon::after {
+  right: 0;
+}
+
+/* 📱 Responsive text size for phones */
+@media (max-width: 480px) {
+  .ribbon {
+    font-size: 1rem;
+    padding: 4px 16px;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+  gap: 20px;
+
+  /* 🎬 Entrance animation on page load */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.polaroid {
+  background: white;
+  padding: 10px 10px 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  width: 200px;
+  transform: rotate(calc(-5deg + 10deg * var(--rand)));
+  transition: transform 0.3s ease;
+
+  /* 🎞 Scroll animation setup */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.polaroid.animate {
+  opacity: 1;
+  transform: rotate(calc(-5deg + 10deg * var(--rand))) translateY(0);
+}
+
+.polaroid:hover {
+  transform: scale(1.05) rotate(0deg);
+  z-index: 10;
+}
+
+.polaroid img {
+  width: 100%;
+  height: 200px; /* fixed height to force crop */
+  object-fit: cover; /* crops landscape images */
+  object-position: center; /* center crop */
+  border-radius: 3px;
+  display: block;
+}
+
+.caption {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.message {
+  max-width: 800px;
+  margin: 90px auto 90px auto;
+  padding: 0 100px; 
+}
+
+.message p {
+  margin: 0 0 30px;
+  font-weight: 500;
+  font-size: 1rem;
+  transform: translateY(20px); 
+  animation: slideUp 0.6s ease-out forwards;
+  text-align: justify;
+}
+
+.message .signature {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  text-align: right;
+  font-style: italic;
+}
